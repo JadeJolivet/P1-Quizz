@@ -1,0 +1,157 @@
+*{
+        box-sizing: border-box;
+        margin:0;
+        padding: 0;
+        
+}
+
+:roots{
+    --primary-font: "Monteserrat , sans-serif";
+    --secondary-font: "Poppins , sans-serif";
+}
+
+
+
+.logo{
+    width: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0;
+    
+ }
+
+/* your gradient background will extend the entire height of the content without repeating, even if the content is scrollable.*/
+
+html {
+    min-height: 100%;
+}
+
+
+body{
+background: linear-gradient(rgba(17, 16, 56, 1),85%,rgba(245, 112, 254, 1));
+}
+
+header>h1{
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    margin: 0 auto;
+    padding: 0;
+
+}
+
+.blue{
+    color: rgba(186, 245, 255, 1);
+}
+
+.pink{
+    color:rgba(245, 112, 254, 1);
+    transform: translate(0rem, 1rem); 
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0%;
+    padding: 1rem;
+}
+
+h2, p{
+    color: whitesmoke;
+}
+
+.question-box{
+    border: solid rgba(156, 184, 255, 1);
+    box-shadow: 0 0 10px 1px #48abe0;
+    border-radius: 1rem ;
+    text-align: center;
+    margin-top: 30px;
+    margin: 30px;
+    padding: 30px;
+
+}
+
+.answer-box{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 1.6rem;
+
+  
+}
+
+
+.answer1{
+    border: solid rgba(156, 184, 255, 1);
+    box-shadow: 0 0 10px 1px #48abe0;
+    border-radius: 1rem ;
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    margin: 10px;
+    
+}
+
+.answer2{
+    border: solid rgba(156, 184, 255, 1);
+    box-shadow: 0 0 10px 1px #48abe0;
+    border-radius: 1rem ;
+    text-align: center;
+    margin-top: 0.5rem;
+    padding: 20px;
+    margin: 10px ;
+    
+    
+
+}
+
+.answer3{
+    border: solid rgba(156, 184, 255, 1);
+    box-shadow: 0 0 10px 1px #48abe0;
+    border-radius: 1rem ;
+    text-align: center;
+    margin-top: 0.5rem;
+    padding: 20px;
+    margin: 10px ;
+   
+
+}
+
+.answer4{
+    border: solid rgba(156, 184, 255, 1);
+    box-shadow: 0 0 10px 1px #48abe0;
+    border-radius: 1rem ;
+    text-align: center;
+    margin-top: 0.5rem;
+    padding: 20px;
+    margin: 10px;
+    
+}
+
+/*.next-box{
+    border: solid rgba(156, 184, 255, 1);
+    box-shadow: 0 0 10px 1px #48abe0;
+    border-radius: 1rem ;
+    text-align: center;
+    margin: 0 10px;
+    padding: 10px;
+    width: 100px;
+    float: right;
+    
+}*/
+
+footer > p{
+    text-align: center;
+    color: black;
+    font-size: 1rem;
+}
+
+
+
