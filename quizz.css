@@ -1,0 +1,194 @@
+*{
+        box-sizing: border-box;
+        margin:0;
+        padding: 0;
+        
+}
+
+
+
+.logo{
+    width: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 0;
+  
+    
+ }
+
+/* your gradient background will extend the entire height of the content without repeating, even if the content is scrollable.*/
+
+html {
+    min-height: 100%;
+}
+
+
+body{
+    background: linear-gradient(rgba(17, 16, 56, 1),85%,rgba(245, 112, 254, 1));
+}
+
+header>h1{
+    font-family: Montserrat;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.blue{
+    color: rgba(186, 245, 255, 1);
+}
+
+.pink{
+    color:rgba(245, 112, 254, 1);
+    transform: translate(0rem, 1rem); 
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    
+}
+
+h2, a{
+    color: whitesmoke;
+    font-family: Poppins;
+    font-size: 1rem;
+    text-decoration: none;
+    
+}
+
+section h2:first-of-type{
+    display:flex;
+    justify-content: center;
+    
+}
+
+section>a{
+    margin-top: 30px;
+    
+}
+
+main > .question-box{
+    border: solid rgba(156, 184, 255, 1);
+    box-shadow: 0 0 10px 1px #48abe0;
+    border-radius: 1rem ;
+    width: 300px;
+    height: 90px;
+    margin: 2rem auto; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.timer{
+    box-sizing: border-box;
+    
+}
+
+main > .answer-box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem;
+
+}
+
+
+main > .answer-box > a {
+    border: solid rgba(156, 184, 255, 1);
+    box-shadow: 0 0 10px 1px #48abe0;
+    border-radius: 1rem ;
+    text-align: center;
+    margin-bottom: 50px;
+    width: 250px;
+    min-height: 65px;
+    margin: 0.5rem auto ;
+    display: flex;
+    justify-content: center;
+
+}
+
+.answer-box > a > p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+footer {
+    position:fixed;
+    left:0px;
+    bottom:0px;
+    height:30px;
+    width:100%;
+    }
+
+footer > p{
+    text-align: center;
+    color: #111038;
+    
+}
+
+@media screen and (min-width: 992px){
+
+    header{
+       display: grid;
+       grid-template-columns: 1fr 1fr 1fr ;
+       grid-template-rows: auto;
+       align-items: start;
+    
+    }
+
+    header>a{
+        grid-column-start: 1/3;
+        justify-self: start;
+    }
+
+
+    header>h1{
+        grid-column: 2/3;
+    }
+
+    .question-box{
+        width: 700px;
+        min-height: 200px;
+        margin: 30px auto;
+    }
+
+    main > .answer-box{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        
+    }
+
+    .answer-box > a{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        }
+
+    .answer1{
+      justify-self: left;
+
+    }
+
+    footer{
+     footer {position: absolute, bottom 0;}
+    }
+   
+}
+
+
+
