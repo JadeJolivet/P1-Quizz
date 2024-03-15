@@ -1,0 +1,265 @@
+
+
+
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    background: linear-gradient(rgba(17, 16, 56, 1),85%,rgba(245, 112, 254, 1));
+
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header > a > img{
+    width: 8rem;
+    
+}
+
+header > h1 {
+    display: flex;
+    color: #9CB8FF;
+    font-family: montserrat;
+}
+
+header > h1 > span {
+    display: flex;
+    color: #F570FE;
+    transform: translate(0rem, 1rem);
+}
+
+/* Partie Main */
+
+main > h2:first-of-type {
+    color: #9CB8FF;
+    margin: 2.5rem 0rem 2.5rem 0rem;
+    font-family: poppins;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ main section:first-of-type {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 0.5rem;
+    margin: 0rem;
+} 
+
+
+main > .avatar > a {
+    border: 0.1rem solid #F570FE;
+    border-radius: 100%;
+    box-shadow: 0 0 10px 1px #F570FE;
+    list-style: none;
+    width: 8rem;
+    height: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.elfe {
+    background-image: url(./img/Elfe.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    justify-self: right;
+}
+
+.dragon {
+    background-image: url(./img/Dragon.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    justify-self: right;
+}
+
+.reine {
+    background-image: url(./img/Reine.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    justify-self: left;
+}
+
+.roi {
+    background-image: url(./img/Roi.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    justify-self: right;
+}
+
+.orc {
+    background-image: url(./img/Orc.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.guerrier {
+    background-image: url(./img/Guerrier.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+main > h2:last-of-type {
+    color: #9CB8FF;
+    margin: 2.5rem 0rem 1rem 0rem;
+    font-family: poppins;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+main > section:last-of-type{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+main > .label > a{
+    box-shadow: 0 0 10px 1px #F570FE;
+    border-radius: 30px;
+    text-decoration: none;
+    color: #F570FE;
+    background-color: #111038;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2rem;
+    width: 5rem;
+    margin-left: 0.5rem;
+}
+
+main > .label > a:hover{
+    color: #111038;
+    background-color: #F570FE;
+    box-shadow: 0 0 10px 1px #111038;
+}
+
+
+
+input {
+    box-shadow: 0 0 10px 1px #F570FE;
+    height: 2rem;
+    width: 15rem;
+    border-radius: 30px;
+    background-color:#9cb8ff61;
+    padding: 0.8rem;
+    font-family: poppins;
+    font-weight: bold;
+}
+
+input:focus {
+    background-color: #F570FE;
+    color: #111038;
+    box-shadow: 0 0 10px 1px #111038;
+}
+
+
+
+footer > p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Poppins;
+    color: #111038;
+
+}
+
+/* Partie responsive */
+
+@media screen and (min-width: 992px) {
+
+    header {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr ;
+        grid-template-rows: auto; 
+    }
+
+    header > a {
+        grid-column-start: 1/3;
+        justify-self: start;
+    }
+
+    header > h1 {
+        grid-column: 2/3;
+        justify-self: center;
+    }
+
+    main > h2:first-of-type {
+        margin: 2.5rem 0rem 2.5rem 2.5rem;
+        display: flex;
+        justify-content:flex-start;
+
+    }
+
+    main > h2:last-of-type {
+        margin: 2.5rem 0rem 2.5rem 2.5rem;
+        display: flex;
+        justify-content:flex-start;
+    }
+
+    main > section:last-of-type{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-left: 0.5rem;
+        margin-bottom: 1rem;
+    }
+
+    main section:first-of-type {
+        grid-template-columns: 1fr 1fr 4fr;
+        grid-template-rows: 1fr 1fr;
+    } 
+    
+
+    main > .avatar > a {
+        border: 0.1rem solid #F570FE;
+        border-radius: 100%;
+        box-shadow: 0 0 10px 1px #F570FE;
+        list-style: none;
+        width: 8rem;
+        height: 8rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .dragon {
+        justify-self: left;
+        margin-left: 0.5rem;
+    }
+
+    .elfe {
+        justify-self: left;
+    }
+   
+    .roi {
+        justify-self: left;
+    }
+
+    .orc {
+        margin-left: 0.5rem;
+    }
+
+}
