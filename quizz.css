@@ -15,8 +15,7 @@
     margin: auto;
     margin-bottom: 0;
   
-    
- }
+}
 
 /* your gradient background will extend the entire height of the content without repeating, even if the content is scrollable.*/
 
@@ -51,28 +50,20 @@ header{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
-    
 }
 
-h2, a{
+h2, div{
     color: whitesmoke;
     font-family: Poppins;
     font-size: 1rem;
     text-decoration: none;
-    
 }
 
-section h2:first-of-type{
+h2 > .question-text{
     display:flex;
-    justify-content: center;
-    
+    justify-content: center;  
 }
 
-section>a{
-    margin-top: 30px;
-    
-}
 
 main > .question-box{
     border: solid rgba(156, 184, 255, 1);
@@ -85,7 +76,6 @@ main > .question-box{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
 }
 
 .timer{
@@ -99,11 +89,12 @@ main > .answer-box{
   align-items: center;
   justify-content: center;
   margin: 2rem;
+  cursor: pointer;
 
 }
 
 
-main > .answer-box > a {
+main > .answer-box > div {
     border: solid rgba(156, 184, 255, 1);
     box-shadow: 0 0 10px 1px #48abe0;
     border-radius: 1rem ;
@@ -117,12 +108,20 @@ main > .answer-box > a {
 
 }
 
-.answer-box > a > p {
+.answer-box :hover{
+    background-color: #077dbd;
+    color: #111038;
+    transition: 1s  ease;
+
+}
+
+.answer-box > div > p {
     display: flex;
     justify-content: center;
     align-items: center;
+    
+    
 }
-
 
 
 footer {
@@ -131,7 +130,7 @@ footer {
     bottom:0px;
     height:30px;
     width:100%;
-    }
+}
 
 footer > p{
     text-align: center;
@@ -146,7 +145,6 @@ footer > p{
        grid-template-columns: 1fr 1fr 1fr ;
        grid-template-rows: auto;
        align-items: start;
-    
     }
 
     header>a{
@@ -154,13 +152,12 @@ footer > p{
         justify-self: start;
     }
 
-
     header>h1{
         grid-column: 2/3;
     }
 
-    .question-box{
-        width: 700px;
+    main> .question-box{
+        width: 600px;
         min-height: 200px;
         margin: 30px auto;
     }
@@ -169,19 +166,14 @@ footer > p{
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto;
-        
+        gap: 20px;    
     }
 
-    .answer-box > a{
+   main .answer-box > div{
         display: flex;
         align-items: center;
         justify-content: center;
-
-        }
-
-    .answer1{
-      justify-self: left;
-
+        width: 500px;
     }
 
     footer{
