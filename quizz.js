@@ -48,10 +48,11 @@ function nextQuestion() {
         answerBoxes.forEach((box, index) => {
             box.textContent = currentAnswers[index];   
         });
+        
         questionIndex++;
 
     } else {
-        alert("Well done !");
+        document.location.href="endPage.html";
     }
 }
 

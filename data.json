@@ -1,0 +1,105 @@
+[
+    {
+            "techQuestions":[
+            "question": "Quelle entreprise est connue pour son système d'exploitation mobile iOS ?",
+            "answer":{
+                "A) Google", 
+                "B) Microsoft",
+                "C) Apple",
+                "D) Samsung"},
+            "correctAnswer": "C) Apple"
+        },
+        {
+            "question": "Qu'est-ce que VR signifie dans le contexte des technologies ?",
+            "answer": [
+                "answer":
+                "A) Vision Réelle",
+                "B) Réalité Virtuelle ", 
+                "C) Vitesse Rapide" ,
+                "D) Valeur Régulière"], 
+            "correctAnswer": "B) Réalité Virtuelle "
+        },
+        {
+            "question": "Quel est le principal langage de programmation utilisé pour le développement web front-end ?",
+            "answer": [
+                "A) Python",
+                "B) Java",
+                "C) JavaScript", 
+                "D) C++"], 
+            "correctAnswer": "C) JavaScript"
+        },
+        {
+            "question": "Quelle technologie permet aux utilisateurs de naviguer sur Internet de manière anonyme en masquant leur adresse IP ?",
+            "answer": [
+                "A) VPN (Réseau Privé Virtuel)", 
+                "B) FTP (Protocole de Transfert de Fichiers)", 
+                "C) URL (Localisateur de Ressource Universelle)",
+                "D) SSL (Couche de Sockets Sécurisée)"], 
+            "correctAnswer": "A) VPN (Réseau Privé Virtuel)"
+        },
+        {
+            
+            "question": "Quel type de technologie utilise des algorithmes complexes pour simuler des processus cognitifs humains, tels que la perception, le raisonnement et l'apprentissage ?",
+            "answer": [
+                "A) Réalité Virtuelle", 
+                "B) Intelligence Artificielle (IA)", 
+                "C) Réalité Augmentée", 
+                "D) Réseaux de Neurones Artificiels"], 
+            "correctAnswer": "B) Intelligence Artificielle (IA)"
+        },
+        {
+           
+            "question": "Quel est le terme utilisé pour décrire un système de sécurité biométrique qui utilise les empreintes digitales pour vérifier l'identité d'un individu ?",
+            "answer": [
+                "A) RFID",
+                "B) NFC", 
+                "C) VPN", 
+                "D) Touch ID"], 
+            "correctAnswer": "D) Touch ID"
+    
+        },
+        { 
+            
+            "question": "Quel entrepreneur et ingénieur est à la tête de SpaceX, Tesla, et The Boring Company, et est souvent impliqué dans des projets révolutionnaires tels que les véhicules électriques et la colonisation de Mars ?",
+            "answer": [
+                "A) Jeff Bezos", 
+                "B) Elon Musk", 
+                "C) Tim Cook", 
+                "D) Sundar Pichai"], 
+            "correctAnswer": "B) Elon Musk"
+    
+        },
+        {
+            
+            "question": "Si un ordinateur a des problèmes de sommeil, que devrait-il faire ?",
+            "answer": [
+                "A) Prendre des pilules d'alt+tab", 
+                "B) Faire une sieste dans le cloud", 
+                "C) Réinitialiser son horloge interne", 
+                "D) la réponse D"], 
+            "correctAnswer": "D) la réponse D"
+    
+        },
+        {
+            
+            "question": "Quel système de stockage de données utilise des serveurs distants accessibles via Internet au lieu de recourir à des disques durs locaux ?",
+            "answer": [
+                "A) Stockage en nuage (Cloud Storage)", 
+                "B) Stockage sur disque dur", 
+                "C) Stockage sur clé USB", 
+                "D) Stockage sur CD-ROM"], 
+            "correctAnswer": "A) Stockage en nuage (Cloud Storage)"
+    
+        },
+        {
+        
+            "question": "Quel entrepreneur est à la tête de la société Amazon et est également connu pour son rôle dans l'exploration spatiale avec sa société Blue Origin ?",
+            "answer": [
+                "A) Elon Musk", 
+                "B) Bill Gates", 
+                "C) Jeff Bezos", 
+                "D) Mark Zuckerberg"], 
+            "correctAnswer": "C) Jeff Bezos"
+        }]
+    }
+]
