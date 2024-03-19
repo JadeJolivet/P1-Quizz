@@ -52,7 +52,7 @@ main > h2:first-of-type {
     align-items: center;
 }
 
- main section:first-of-type {
+ main > .avatar {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
@@ -73,47 +73,55 @@ main > .avatar > a {
     justify-content: center;
 }
 
+
+main > .avatar > a:hover{
+    box-shadow: 0 0 10px 1px #BAF5FF;
+    border: 0.1rem solid rgb(186, 245, 255);
+}
+
 .elfe {
-    background-image: url(./img/Elfe.jpg);
-    background-size: 100%;
+    background-image: url(./avatar.img/pikachu.png);
+    background-size: 70%;
     background-repeat: no-repeat;
     background-position: center;
     justify-self: right;
+    
 }
 
+
 .dragon {
-    background-image: url(./img/Dragon.jpg);
-    background-size: 100%;
+    background-image: url(./avatar.img/batman.png);
+    background-size: 70%;
     background-repeat: no-repeat;
     background-position: center;
     justify-self: right;
 }
 
 .reine {
-    background-image: url(./img/Reine.jpg);
-    background-size: 100%;
+    background-image: url(./avatar.img/sangoku.png);
+    background-size: 5rem;
     background-repeat: no-repeat;
     background-position: center;
     justify-self: left;
 }
 
 .roi {
-    background-image: url(./img/Roi.jpg);
-    background-size: 100%;
+    background-image: url(./avatar.img/lion.png);
+    background-size: 70%;
     background-repeat: no-repeat;
     background-position: center;
     justify-self: right;
 }
 
 .orc {
-    background-image: url(./img/Orc.jpg);
+    background-image: url(./avatar.img/lapin.png);
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .guerrier {
-    background-image: url(./img/Guerrier.jpg);
+    background-image: url(./avatar.img/castor.png);
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
@@ -148,6 +156,8 @@ main > .label > a{
     height: 2rem;
     width: 5rem;
     margin-left: 0.5rem;
+    font-family: poppins;
+    font-weight: bold;
 }
 
 main > .label > a:hover{
@@ -227,9 +237,10 @@ footer > p {
         margin-bottom: 1rem;
     }
 
-    main section:first-of-type {
+    main > .avatar{
         grid-template-columns: 1fr 1fr 4fr;
         grid-template-rows: 1fr 1fr;
+        
     } 
     
 
