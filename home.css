@@ -1,0 +1,158 @@
+body {
+  margin: 0;
+  height: 100%;
+}
+
+.container {
+  background: linear-gradient(to bottom, #111038 74%, #f570fe 100%);
+  max-height: 100dvh;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0%;
+  padding-bottom: 0.5rem;
+  background-color: #111038;
+}
+
+header>a>img{
+  width: 5rem;
+
+}
+
+header>h1{
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+  margin: 0 auto;
+  padding: 0;
+
+}
+
+h1 {
+  font-family: "Montserrat", sans-serif;
+}
+.blue {
+  color: rgb(186, 245, 255,1);
+}
+.pink {
+  color: rgba(245, 112, 254, 1);
+  transform: translate(0rem, 1rem); 
+}
+
+
+.body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#title {
+  color: white;
+  display: flex;
+  width: 20%;
+  font-family: "Montserrat", sans-serif;
+}
+
+#title1 {
+  color: #baf5ff;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  font-size: 3em;
+}
+
+#title2 {
+  color: #f570fe;
+  padding-top: 4%;
+  margin-left: 3%;
+  font-weight: 600;
+  font-size: 3em;
+}
+
+.themes {
+  display: grid;
+  grid-template-columns: 1fr 1fr ;
+  gap: 40px;
+  padding: 10px;
+}
+
+#themeTitle {
+  color: white;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid white;
+  box-shadow: 4px 8px 40px 10px #9cb8ff;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  border-radius: 30px;
+  display: none;
+ 
+}
+#themeTitle1 {
+  color: black;
+ 
+}
+
+button{
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  border: 2px solid white;
+  box-shadow: 4px 8px 40px 10px #9cb8ff;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  border-radius: 30px;
+  display: none;
+}
+
+
+#theme {
+  position: relative;
+  display: inline-block;
+}
+
+
+#theme:hover button {
+  display: block;
+}
+
+
+#theme:hover #themeImg {
+  opacity: 0.4;
+}
+
+#themeImg {
+  border-radius: 15%;
+  box-shadow: 12px 8px 40px 10px #9cb8ff;
+  width: 60%;
+}
+
+footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f570fe;
+}
+
+#copyrights {
+  display: flex;
+  width: 90%;
+  justify-content: space-around;
+}
+
+#socialMediaImg {
+  margin-right: 10px;
+}
