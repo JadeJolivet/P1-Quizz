@@ -1,9 +1,8 @@
-
 const questionText = document.querySelector(".question-text");
 const answerBoxes = document.querySelectorAll(".answer-box div");
 
-
 let questionIndex = 0;
+let questionThemeIndex = 0;
 let questionTheme;
 let score = {
     tech: 0,
@@ -12,8 +11,8 @@ let score = {
     sport: 0
 };
 
-function showQuestionTheme() {
-    switch (Math.floor(questionIndex / 10)) {
+function questionCategory() {
+    switch (questionThemeIndex) {
         case 0:
             questionTheme = techQuestions;
             break;
@@ -31,85 +30,47 @@ function showQuestionTheme() {
     }
 }
 
-/*Avec la methode du switch + math.floor/10 
-tech est indicé de 0 à 9, 
-histoire de 10 à 19,
-culture de 20 à 29 
-sport de 30 à 39*/
+function showQuestion() {
+    let currentQuestion = questionTheme[questionIndex];
+    questionText.textContent = currentQuestion.question;
+    const currentAnswers = currentQuestion.answer;
+    const correctAnswer = currentQuestion.correctAnswer;
 
-function nextQuestion() {
-    showQuestionTheme();
-
-    if (questionIndex < questionTheme.length){
-        let currentQuestion = questionTheme[questionIndex % 10];
-        questionText.textContent = currentQuestion.question;
-        const currentAnswers = currentQuestion.answer;
-
-        answerBoxes.forEach((box, index) => {
-            box.textContent = currentAnswers[index];   
-        });
+    answerBoxes.forEach((box, index) => {
+        box.textContent = currentAnswers[index];   
         
-        questionIndex++;
+    });
+}
 
+function NextQuestion() {
+    if (questionIndex < questionTheme.length) {
+        questionIndex++;
+        showQuestion();
     } else {
-        document.location.href="endPage.html";
+        questionIndex = 0;
+        questionThemeIndex++;
+        if (questionThemeIndex >= 4) {
+            document.location.href = "endPage.html";
+        } else {
+            questionCategory();
+            showQuestion();
+        }
     }
 }
 
 answerBoxes.forEach(box => {
-    box.addEventListener('click', nextQuestion);
+    box.addEventListener('click', NextQuestion);
 });
 
-nextQuestion();
+
+questionCategory();
+showQuestion();
 
 //appel de la fonction pour afficher la question
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-function nextQuestion() {
-    if (currentQuestionIndex < techQuestions.length){
-        let currentQuestion = techQuestions[currentQuestionIndex];
-        questionText.textContent = currentQuestion.question;
-        const currentAnswers = currentQuestion.answer;
-        
-        answerBoxes.forEach((box, index) => {
-            box.textContent = currentAnswers[index];   
-        });
-      currentQuestionIndex++;
-
-    } else {
-
-        alert("Well done !");
-    }
-}
-
-answerBoxes.forEach(box => {
-    box.addEventListener('click', nextQuestion);
-});
-
-nextQuestion();
-       
-
-
-
-
-
-
 //Fonction pour donner un ordre aléatoire aux questions 
-function showTechQuestions() {
+/*function showTechQuestions() {
         const randomIndex = Math.floor(Math.random() * techQuestions.length);    
         questionText.textContent = techQuestions[randomIndex];
     }
@@ -134,39 +95,9 @@ function showTechQuestions() {
   
 
 
+//HYPER IMPORTANT SANS CE COMMENTAIRE LE CODE NE FONCTIONNE PLUS//
 
-
-   /* import questionArray from './questionArray';
-   
-// Fonction pour afficher la réponse correspondante lors du clic sur une boîte de réponse
-function showAnswer(answer, index) {
-    answerBoxes[index].querySelector('p').textContent = answer;
-}
-
-// Boucle à travers chaque boîte de réponse et attache un gestionnaire d'événements de clic
-answerBoxes.forEach((box, index) => {
-    box.addEventListener('click', () => {
-        const answer = obtenirRéponseAppropriée(index); // Vous devrez définir votre propre fonction pour obtenir la réponse appropriée en fonction de l'index
-        showAnswer(answer, index);
-    });
-});
-    
-
-
-
-
-
-
-
-
-
-
-
-
-/*import { quizzAnswers, quizzQuestions } from "./createQuizz";
-
-
-import questionArray from './questionArray';
+/*import questionArray from './questionArray';
 for (let i = 0; i < techQuestions.length; i++){
         const  currentQuestion = techQuestions [i];
         quizzQuestions(currentQuestions);
