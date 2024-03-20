@@ -24,10 +24,37 @@ header {
     justify-content: center;
 }
 
+
 header > a > img{
     width: 8rem;
     
 }
+
+/* div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+progress{
+    border: 0.1rem solid #F570FE;
+    border-radius: 30px;
+    box-shadow: 0 0 10px 1px #F570FE;
+    width: 15rem;
+
+
+}
+
+progress::-webkit-progress-bar {
+    border-radius: 30px;
+    background-color: #9CB8FF;
+}
+
+progress::-webkit-progress-value {
+    background-color: #F570FE;
+    border-radius: 30px;
+  
+} */
 
 header > h1 {
     display: flex;
@@ -80,8 +107,8 @@ main > .avatar > a:hover{
 }
 
 .elfe {
-    background-image: url(./avatar.img/pikachu.png);
-    background-size: 70%;
+    background-image: url(./avatar.img/ronald-removebg-preview.png);
+    background-size: 130%;
     background-repeat: no-repeat;
     background-position: center;
     justify-self: right;
@@ -90,7 +117,7 @@ main > .avatar > a:hover{
 
 
 .dragon {
-    background-image: url(./avatar.img/batman.png);
+    background-image: url(./avatar.img/pumba-removebg-preview.png);
     background-size: 70%;
     background-repeat: no-repeat;
     background-position: center;
@@ -98,31 +125,31 @@ main > .avatar > a:hover{
 }
 
 .reine {
-    background-image: url(./avatar.img/sangoku.png);
-    background-size: 5rem;
+    background-image: url(./avatar.img/kassos-removebg-preview.png);
+    background-size: 150%;
     background-repeat: no-repeat;
     background-position: center;
     justify-self: left;
 }
 
 .roi {
-    background-image: url(./avatar.img/lion.png);
-    background-size: 70%;
+    background-image: url(./avatar.img/vador-removebg-preview.png);
+    background-size: 80%;
     background-repeat: no-repeat;
     background-position: center;
     justify-self: right;
 }
 
 .orc {
-    background-image: url(./avatar.img/lapin.png);
-    background-size: 100%;
+    background-image: url(./avatar.img/pikachu-removebg-preview.png);
+    background-size: 80%;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .guerrier {
-    background-image: url(./avatar.img/castor.png);
-    background-size: 100%;
+    background-image: url(./avatar.img/thor-removebg-preview.png);
+    background-size: 150%;
     background-repeat: no-repeat;
     background-position: center;
 }

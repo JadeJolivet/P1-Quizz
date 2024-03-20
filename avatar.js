@@ -24,3 +24,24 @@ playerArray.forEach(function(avatar) {
         }
     });
 });
+
+
+// document.addEventListener("DOMContentLoaded", function() {
+//     const progressbar = document.getElementById('progressbar'),
+//           max = progressbar.getAttribute('max'),
+//           time = 0;
+//     let value = parseInt(progressbar.value);
+   
+//     const loading = function() {
+//       value += 1;
+//       progressbar.value = value;
+//       document.querySelector('.progress-value').innerHTML = value + '%';
+   
+//       if (max == value) {
+//         clearInterval(animate);                
+//       }
+//     };
+   
+//     const animate = setInterval(function() {
+//       loading();}, time);
+//   });
