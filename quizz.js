@@ -34,7 +34,7 @@ function showQuestion() {
     let currentQuestion = questionTheme[questionIndex];
     questionText.textContent = currentQuestion.question;
     const currentAnswers = currentQuestion.answer;
-    const correctAnswer = currentQuestion.correctAnswer;
+    const correctAnswer = currentQuestion.correctAnswer; 
 
     answerBoxes.forEach((box, index) => {
         box.textContent = currentAnswers[index];   
@@ -56,17 +56,41 @@ function NextQuestion() {
             showQuestion();
         }
     }
+
+    document.addEventListener("click", function() {
+        const progressbar = document.getElementById('progressbar'),
+              max = progressbar.getAttribute('max'),
+              time = 0;
+        let value = parseInt(progressbar.value);
+    
+        const loading = function() {
+          value += 1;
+          progressbar.value = value;
+          document.querySelector('.progress-value').innerHTML = value + '%';
+    
+          if (max == value) {
+            clearInterval(animate);
+          }
+        };
+    
+        const animate = setInterval(function() {
+          loading();}, time);
+      });
 }
 
 answerBoxes.forEach(box => {
     box.addEventListener('click', NextQuestion);
+    
 });
 
 
+
+//appel de la fonction pour afficher la question et la catégorie
 questionCategory();
 showQuestion();
 
-//appel de la fonction pour afficher la question
+
+
 
 
 //Fonction pour donner un ordre aléatoire aux questions 
