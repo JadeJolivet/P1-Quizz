@@ -130,7 +130,7 @@ const historyQuestions = [
             "B) François Ier", 
             "C) Henri II ", 
             "D) Louis XIV"], 
-        correctAnswer: "C) Henri II "
+        correctAnswer: "C) Henri II"
     },
     {
         

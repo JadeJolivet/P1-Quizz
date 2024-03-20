@@ -4,12 +4,7 @@ const answerBoxes = document.querySelectorAll(".answer-box div");
 let questionIndex = 0;
 let questionThemeIndex = 0;
 let questionTheme;
-let score = {
-    tech: 0,
-    history: 0,
-    culture: 0,
-    sport: 0
-};
+let correctAnswer;
 
 function questionCategory() {
     switch (questionThemeIndex) {
@@ -34,90 +29,52 @@ function showQuestion() {
     let currentQuestion = questionTheme[questionIndex];
     questionText.textContent = currentQuestion.question;
     const currentAnswers = currentQuestion.answer;
-    const correctAnswer = currentQuestion.correctAnswer; 
+    correctAnswer = currentQuestion.correctAnswer; // Sauvegarde de la réponse correcte
 
     answerBoxes.forEach((box, index) => {
         box.textContent = currentAnswers[index];   
-        
+        box.style.color = ''; // Réinitialisation de la couleur du texte
+    });
+}
+
+function revealAnswer() {
+    answerBoxes.forEach((box, index) => {
+        if (box.textContent === correctAnswer) {
+            box.style.color = 'green'; // Révélation de la réponse correcte en vert
+        }else{
+            box.style.color ="red";
+        }
     });
 }
 
 function NextQuestion() {
-    if (questionIndex < questionTheme.length) {
+    setTimeout(() => {
         questionIndex++;
-        showQuestion();
-    } else {
-        questionIndex = 0;
-        questionThemeIndex++;
-        if (questionThemeIndex >= 4) {
-            document.location.href = "endPage.html";
-        } else {
-            questionCategory();
+        if (questionIndex < questionTheme.length) {
             showQuestion();
+        } else {
+            questionIndex = 0;
+            questionThemeIndex++;
+            if (questionThemeIndex >= 4) {
+                document.location.href = "endPage.html";
+            } else {
+                questionCategory();
+                showQuestion();
+            }
         }
-    }
-
-    document.addEventListener("click", function() {
-        const progressbar = document.getElementById('progressbar'),
-              max = progressbar.getAttribute('max'),
-              time = 0;
-        let value = parseInt(progressbar.value);
-    
-        const loading = function() {
-          value += 1;
-          progressbar.value = value;
-          document.querySelector('.progress-value').innerHTML = value + '%';
-    
-          if (max == value) {
-            clearInterval(animate);
-          }
-        };
-    
-        const animate = setInterval(function() {
-          loading();}, time);
-      });
+    }, 4000); // Délai de 4 secondes avant de passer à la prochaine question
 }
 
 answerBoxes.forEach(box => {
-    box.addEventListener('click', NextQuestion);
-    
+    box.addEventListener('click', () => {
+        revealAnswer(); // Révéler la réponse au clic
+        NextQuestion(); // Passer à la question suivante après un délai de 2 secondes
+    });
 });
 
-
-
-//appel de la fonction pour afficher la question et la catégorie
+// Appel initial pour afficher la première question
 questionCategory();
 showQuestion();
-
-
-
-
-
-
-//Fonction pour donner un ordre aléatoire aux questions 
-/*function showTechQuestions() {
-        const randomIndex = Math.floor(Math.random() * techQuestions.length);    
-        questionText.textContent = techQuestions[randomIndex];
-    }
-    
-    function showHistoryQuestions() {
-        const randomIndex = Math.floor(Math.random() * historyQuestions.length);
-        questionText.textContent = historyQuestions[randomIndex];
-    }
-    
-    function showCultureQuestion() {
-        const randomIndex = Math.floor(Math.random() * cultureQuestions.length);
-        questionText.textContent = cultureQuestions[randomIndex];
-    }
-    
-    function showSportQuestion() {
-        const randomIndex = Math.floor(Math.random() * sportQuestions.length);
-        questionText.textContent = sportQuestions[randomIndex];
-    }
-
-    // Fonction pour donner un ordre aléatoire aux reponses 
-
-  
 
 
 //HYPER IMPORTANT SANS CE COMMENTAIRE LE CODE NE FONCTIONNE PLUS//
