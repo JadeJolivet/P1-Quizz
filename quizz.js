@@ -93,6 +93,7 @@ showQuestion();
 
 
 
+
 //Fonction pour donner un ordre aléatoire aux questions 
 /*function showTechQuestions() {
         const randomIndex = Math.floor(Math.random() * techQuestions.length);    

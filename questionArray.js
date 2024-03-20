@@ -313,93 +313,93 @@ const cultureQuestions = [
 
 const sportQuestions = [
     {
-        question: "Sous quel roi de France le vin de Bordeaux était-il le plus réputé ?",
+        question: "1- Pour quel sport les arbitres sont-ils obligés d'utiliser la langue française ?",
         answer: [
-            "A) Louis XIV ", 
-            "B) Henri IV", 
-            "C) François Ier ", 
-            "D) Louis XV"], 
-        correctAnswer: "B) Henri IV"
+            "A) La lutte",
+            "B) L'escrime",
+            "C) La boxe",
+            "D L'équitation"], 
+        correctAnswer: "B) L'escrime"
     },
     {
-        question: "Sous quel roi de France le vin de Bordeaux était-il le plus réputé ?",
+        question: "Au judo, quel est le grade le plus élevé parmi ces ceintures ?",
         answer: [
-            "A) Louis XIV ", 
-            "B) Henri IV", 
-            "C) François Ier ", 
-            "D) Louis XV"], 
-        correctAnswer: "B) Henri IV"
+            "A) Bleue",
+            "B) Orange",
+            "C) Verte",
+            "D Jaune ", ], 
+        correctAnswer: "A) Bleue"
     },
     {
-        question: "Sous quel roi de France le vin de Bordeaux était-il le plus réputé ?",
+        question: "A quel sport doit-on jouer pendant 2 mi-temps de 40 minutes ?",
         answer: [
-            "A) Louis XIV ", 
-            "B) Henri IV", 
-            "C) François Ier ", 
-            "D) Louis XV"], 
-        correctAnswer: "B) Henri IV"
+            "A) Au football",
+            "B) Au rugby",
+            "C) Au handall",
+            "D Au basket-ball ", ], 
+        correctAnswer: "B) Au rugby"
     },
     {
-        question: "Sous quel roi de France le vin de Bordeaux était-il le plus réputé ?",
+        question: "A Quelle équipe de foot est associé le stade Matmut Atlantique ?",
         answer: [
-            "A) Louis XIV ", 
-            "B) Henri IV", 
-            "C) François Ier ", 
-            "D) Louis XV"], 
-        correctAnswer: "B) Henri IV"
+            "A) As Saint Etienne",
+            "B) Fs Nantes",
+            "C) Girondins du Bordeaux",
+            "D) PSG"], 
+        correctAnswer: "C) Girondins du Bordeaux"
     },
     {
-        question: "Sous quel roi de France le vin de Bordeaux était-il le plus réputé ?",
+        question: "Quel pays a le record du pays organisateur ayant encaissé le plus grand nombre de buts en un match ?",
         answer: [
-            "A) Louis XIV ", 
-            "B) Henri IV", 
-            "C) François Ier ", 
-            "D) Louis XV"], 
-        correctAnswer: "B) Henri IV"
+            "A) Le Brésil", 
+            "B) L’argentine", 
+            "C) L’Angleterre",
+            "D) L’Allemagne "], 
+        correctAnswer: "A) Le Brésil"
     },
     {
-        question: "Sous quel roi de France le vin de Bordeaux était-il le plus réputé ?",
+        question: "Que représentent les 5 anneaux olympiques ?",
         answer: [
-            "A) Louis XIV ", 
-            "B) Henri IV", 
-            "C) François Ier ", 
-            "D) Louis XV"], 
-        correctAnswer: "B) Henri IV"
+            "A) Les 5 sports principaux des Jo",
+            "B) Les 5 régions du monde",
+            "C) Les 5 doigts du mais",
+            "D) 5 années d’intervalles "], 
+        correctAnswer: "B) Les 5 régions du monde "
     },
     {
-        question: "Sous quel roi de France le vin de Bordeaux était-il le plus réputé ?",
+        question: "Combien y a t'il de joueurs sur un terrain de handball ?",
         answer: [
-            "A) Louis XIV ", 
-            "B) Henri IV", 
-            "C) François Ier ", 
-            "D) Louis XV"], 
-        correctAnswer: "B) Henri IV"
+            "A) 5",
+            "B) 7",
+            "C) 9",
+            "D) 8"], 
+        correctAnswer: "A) 5"
     },
     {
-        question: "Sous quel roi de France le vin de Bordeaux était-il le plus réputé ?",
+        question: "Combien de fois Paris a-t-elle accueilli les Jeux olympiques?",
         answer: [
-            "A) Louis XIV ", 
-            "B) Henri IV", 
-            "C) François Ier ", 
-            "D) Louis XV"], 
-        correctAnswer: "B) Henri IV"
+            "A) 3 fois", 
+            "B) 4 fois",
+            "C) 2 fois",
+            "D) 5 fois "], 
+        correctAnswer: "A) 3 fois"
     },
     {
-        question: "Sous quel roi de France le vin de Bordeaux était-il le plus réputé ?",
+        question: "- De ces quatre disciplines, laquelle utilise la plus petite surface de jeu ?",
         answer: [
-            "A) Louis XIV ", 
-            "B) Henri IV", 
-            "C) François Ier ", 
-            "D) Louis XV"], 
-        correctAnswer: "B) Henri IV"
+            "A) Le tennis",
+            "B) Le basket-ball",
+            "C) Le volley-ball",
+            "D) Le handball"], 
+        correctAnswer: "C) Le volley-ball"
     },
     {
-        question: "Sous quel roi de France le vin de Bordeaux était-il le plus réputé ?",
+        question: " Quel pays termine en tête du classement générale des jeux olympiques de pékin 2022 ?",
         answer: [
-            "A) Louis XIV ", 
-            "B) Henri IV", 
-            "C) François Ier ", 
-            "D) Louis XV"], 
-        correctAnswer: "B) Henri IV"
+            "A) Chine", 
+            "B) Norvége",
+            "C) Japon",
+            "D) Eat unis"], 
+        correctAnswer: "B) Norvége"
     }
 ];
