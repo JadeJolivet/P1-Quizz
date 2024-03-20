@@ -79,9 +79,32 @@ main > .question-box{
 }
 
 .timer{
-    box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     
-}
+    progress{
+        border: 0.1rem solid #F570FE;
+        border-radius: 30px;
+        box-shadow: 0 0 10px 1px #F570FE;
+        width: 15rem;
+    
+    
+    }
+    
+    progress::-webkit-progress-bar {
+        border-radius: 30px;
+        background-color: #9CB8FF;
+    }
+    
+    progress::-webkit-progress-value {
+        background-color: #F570FE;
+        border-radius: 30px;
+    
+    }
+    
+    
 
 main > .answer-box{
   display: flex;
