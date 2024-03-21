@@ -1,29 +1,22 @@
 const questionText = document.querySelector(".question-text");
 const answerBoxes = document.querySelectorAll(".answer-box div");
+const timerBox = document.querySelector(".timer");
+
 
 let questionIndex = 0;
 let questionThemeIndex = 0;
 let questionTheme;
 let correctAnswer;
+let questionNumberExact = 1;
 
 function questionCategory() {
-    switch (questionThemeIndex) {
-        case 0:
-            questionTheme = techQuestions;
-            break;
-        case 1:
-            questionTheme = historyQuestions;
-            break;
-        case 2:
-            questionTheme = cultureQuestions;
-            break;
-        case 3:
-            questionTheme = sportQuestions;
-            break;
-        default:
-            questionTheme = [];
+    if (questionThemeIndex === 0) {
+        questionTheme = mixQuestion;
+    } else {
+        questionTheme = [];
     }
 }
+
 
 function showQuestion() {
     let currentQuestion = questionTheme[questionIndex];
@@ -33,21 +26,57 @@ function showQuestion() {
 
     answerBoxes.forEach((box, index) => {
         box.textContent = currentAnswers[index];   
-        box.style.color = ''; // Réinitialisation de la couleur du texte
+        box.style.color = '';
+        box.style.border =''; // Réinitialisation de la couleur du texte
     });
 }
+
+let timer;
+let timerDuration = 12000;
+
+function startTimer(){
+    let timeLeft = timerDuration / 1000; 
+    timerBox.textContent = timeLeft;
+    
+    
+
+    timer = setInterval(() => {
+        timeLeft--;
+        if (timeLeft >= 0) {
+        timerBox.textContent = timeLeft;
+        
+     }else {
+        clearInterval(timer);
+     }
+
+    }, 1000);
+}
+
+function stopTimer(){
+    clearInterval(timer);
+}
+
+
 
 function revealAnswer() {
     answerBoxes.forEach((box, index) => {
         if (box.textContent === correctAnswer) {
-            box.style.color = 'green'; // Révélation de la réponse correcte en vert
+            box.style.color = 'green';
+            box.style.border = '2px solid #00ff00';  // Texte en vert si correct
+            
         }else{
-            box.style.color ="red";
+            box.style.color = 'red';
+            box.style.border = '2px solid #ff0000'; // Texte en rouge si incorrect
+           
         }
     });
 }
 
+
+
 function NextQuestion() {
+    stopTimer();
+    startTimer();
     setTimeout(() => {
         questionIndex++;
         if (questionIndex < questionTheme.length) {
@@ -55,19 +84,25 @@ function NextQuestion() {
         } else {
             questionIndex = 0;
             questionThemeIndex++;
-            if (questionThemeIndex >= 4) {
+            if (questionThemeIndex >= 1) {
                 document.location.href = "endPage.html";
             } else {
                 questionCategory();
                 showQuestion();
             }
         }
-    }, 4000); // Délai de 4 secondes avant de passer à la prochaine question
+    }, 2000); // Délai de 3 secondes avant de passer à la prochaine question
 }
 
 answerBoxes.forEach(box => {
     box.addEventListener('click', () => {
         revealAnswer(); // Révéler la réponse au clic
+        setTimeout(() => {
+            questionNumberExact++;
+            console.log(questionNumberExact); 
+            const questionNumber = document.getElementsByClassName("questionNumber")[0];
+            questionNumber.innerHTML = questionNumberExact + "/10";
+        }, 2000); // Incrémenter le numéro de question et mettre à jour l'affichage après un délai de 4 secondes
         NextQuestion(); // Passer à la question suivante après un délai de 2 secondes
     });
 });
@@ -75,6 +110,7 @@ answerBoxes.forEach(box => {
 // Appel initial pour afficher la première question
 questionCategory();
 showQuestion();
+startTimer();
 
 
 //HYPER IMPORTANT SANS CE COMMENTAIRE LE CODE NE FONCTIONNE PLUS//
