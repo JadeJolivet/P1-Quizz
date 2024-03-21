@@ -1,5 +1,6 @@
-const techQuestions = [
+const mixQuestion = [
     {
+        //tech
         question: "Quelle entreprise est connue pour son système d'exploitation mobile iOS ?",
         answer: [
             "A) Google", 
@@ -9,34 +10,45 @@ const techQuestions = [
         correctAnswer: "C) Apple",
     },
     {
-        question: "Qu'est-ce que VR signifie dans le contexte des technologies ?",
+        //history
+        question: " Dans la comptine française, qui est célèbre pour 'sa culotte à l'envers' ?",
         answer: [
-            "A) Vision Réelle",
-            "B) Réalité Virtuelle ", 
-            "C) Vitesse Rapide" ,
-            "D) Valeur Régulière"], 
-        correctAnswer: "B) Réalité Virtuelle ",
+            "A) Le roi Dagobert", 
+            "B) Le roi Louis", 
+            "C) Le roi Charles ", 
+            "D) Le roi Philippe"], 
+        correctAnswer: "A) Le roi Dagobert"
+    },
+    {//culture
+        question: "Quel est le prénom du jeune garçon, personnage principal de la série animée «Pokémon»?",
+        answer: [
+            "A) Pierrick ", 
+            "B) Pikachu ", 
+            "C) Sacha ", 
+            "D) James"], 
+        correctAnswer: "C) Sacha "
     },
     {
-        question: "Quel est le principal langage de programmation utilisé pour le développement web front-end ?",
+        //sport
+        question: "A quel sport doit-on jouer pendant 2 mi-temps de 40 minutes ?",
         answer: [
-            "A) Python",
-            "B) Java",
-            "C) JavaScript", 
-            "D) C++"], 
-        correctAnswer: "C) JavaScript"
+            "A) Le football",
+            "B) Le rugby",
+            "C) Le handall",
+            "D  Le basket-ball ", ], 
+        correctAnswer: "B) Le rugby"
+    }, {
+        //culture
+        question: "Quel est le nom associé au personnage joué par Millie Bobby Brown dans «Stranger Things»?",
+        answer: [
+            "A) Quarante-deux ", 
+            "B) Quatre-vingt-onze ", 
+            "C) Seize ", 
+            "D) Onze"], 
+        correctAnswer: "D) Onze"
     },
     {
-        question: "Quelle technologie permet aux utilisateurs de naviguer sur Internet de manière anonyme en masquant leur adresse IP ?",
-        answer: [
-            "A) VPN (Réseau Privé Virtuel)", 
-            "B) FTP (Protocole de Transfert de Fichiers)", 
-            "C) URL (Localisateur de Ressource Universelle)",
-            "D) SSL (Couche de Sockets Sécurisée)"], 
-        correctAnswer: "A) VPN (Réseau Privé Virtuel)"
-    },
-    {
-        
+        //tech
         question: "Quel type de technologie utilise des algorithmes complexes pour simuler des processus cognitifs humains, tels que la perception, le raisonnement et l'apprentissage ?",
         answer: [
             "A) Réalité Virtuelle", 
@@ -46,29 +58,99 @@ const techQuestions = [
         correctAnswer: "B) Intelligence Artificielle (IA)"
     },
     {
-       
-        question: "Quel est le terme utilisé pour décrire un système de sécurité biométrique qui utilise les empreintes digitales pour vérifier l'identité d'un individu ?",
+        //Sport
+        question: "Combien de fois Paris a-t-elle accueilli les Jeux olympiques?",
         answer: [
-            "A) RFID",
-            "B) NFC", 
-            "C) VPN", 
-            "D) Touch ID"], 
-        correctAnswer: "D) Touch ID"
+            "A) 3 fois", 
+            "B) 4 fois",
+            "C) 2 fois",
+            "D) 5 fois "], 
+        correctAnswer: "A) 3 fois"
+    },
+    {
+       //histoire
+       question: "Quelle est la ville où Jeanne d'Arc a mené sa première bataille victorieuse, levant ainsi le siège qui durait depuis plusieurs mois ?",
+       answer: [
+           "A) Rouen",
+           "B) Orléans",
+           "C) Paris",
+           "D) Reims"], 
+       correctAnswer: "B) Orléans"
 
     },
     { 
-        
-        question: "Quel entrepreneur et ingénieur est à la tête de SpaceX, Tesla, et The Boring Company, et est souvent impliqué dans des projets révolutionnaires tels que les véhicules électriques et la colonisation de Mars ?",
+        //culture
+        question: "Quel duo d'artiste francophone  à reprit en 2023 le célèbre morceau «Lady (Hear me Tonight)» sorti en 2000?",
         answer: [
-            "A) Jeff Bezos", 
-            "B) Elon Musk", 
-            "C) Tim Cook", 
-            "D) Sundar Pichai"], 
-        correctAnswer: "B) Elon Musk"
+            "A) Aya Nakamura & Tiakola", 
+            "B) Damso & Stromae", 
+            "C) Hamza & Damso ", 
+            "D) Aucune des 3 réponses"], 
+        correctAnswer: "C) Hamza & Damso "
+
+    }, {
+        //Sport
+        question: "Que représentent les 5 anneaux olympiques ?",
+        answer: [
+            "A) Les 5 sports principaux des Jo",
+            "B) Les 5 régions du monde",
+            "C) Les 5 doigts d'une mains",
+            "D) 5 années d’intervalles "], 
+        correctAnswer: "B) Les 5 régions du monde"
+    },
+    {
+        //histoire
+        question: "Quelle partie du corps de Louis XIV a été affectée par une fistule, une maladie douloureuse qui lui a causé des problèmes de santé pendant une grande partie de sa vie ?",
+        answer: [
+            "A) Le pied ", 
+            "B) L'estomac", 
+            "C) L'oreille ", 
+            "D) L'anus"], 
+        correctAnswer: "D) L'anus"
+    },
+    {
+        //tech
+        question: "Quel est le principal langage de programmation utilisé pour le développement web front-end ?",
+        answer: [
+            "A) Python",
+            "B) Java",
+            "C) JavaScript", 
+            "D) C++"], 
+        correctAnswer: "C) JavaScript"
 
     },
     {
-        
+        //culture        
+        question: "Quel chanteuse américaine interprète «Man Down», et raconte les remords suite à un meurtre?",
+        answer: [
+            "A) Shakira ", 
+            "B) Yoann Fortin ", 
+            "C) Rihanna ", 
+            "D) Shanna Kress"], 
+        correctAnswer: "C) Rihanna "
+    },
+    {
+        //Sport
+        question: "A Quelle équipe de foot est associé le stade Matmut Atlantique ?",
+        answer: [
+            "A) As Saint Etienne",
+            "B) Fs Nantes",
+            "C) Girondins du Bordeaux",
+            "D) PSG"], 
+        correctAnswer: "C) Girondins du Bordeaux"
+
+    },{
+        //histoire
+        question: "Qui, avant le règne de Henri II, a réellement fait connaître Bordeaux dans l'histoire de France ?",
+        answer: [
+            "A) Charles VII", 
+            "B) Aliénor d'Aquitaine", 
+            "C) Louis IX (Saint Louis)", 
+            "D) Philippe IV le Bel"], 
+        correctAnswer: "B) Aliénor d'Aquitaine"
+    },
+    {
+        //tech
         question: "Si un ordinateur a des problèmes de sommeil, que devrait-il faire ?",
         answer: [
             "A) Prendre des pilules d'alt+tab", 
@@ -77,27 +159,6 @@ const techQuestions = [
             "D) la réponse D"], 
         correctAnswer: "D) la réponse D"
 
-    },
-    {
-        
-        question: "Quel système de stockage de données utilise des serveurs distants accessibles via Internet au lieu de recourir à des disques durs locaux ?",
-        answer: [
-            "A) Stockage en nuage (Cloud Storage)", 
-            "B) Stockage sur disque dur", 
-            "C) Stockage sur clé USB", 
-            "D) Stockage sur CD-ROM"], 
-        correctAnswer: "A) Stockage en nuage (Cloud Storage)"
-
-    },
-    {
-    
-        question: "Quel entrepreneur est à la tête de la société Amazon et est également connu pour son rôle dans l'exploration spatiale avec sa société Blue Origin ?",
-        answer: [
-            "A) Elon Musk", 
-            "B) Bill Gates", 
-            "C) Jeff Bezos", 
-            "D) Mark Zuckerberg"], 
-        correctAnswer: "C) Jeff Bezos"
     }
 ];
 
@@ -144,7 +205,7 @@ const historyQuestions = [
     },
     {
         
-        question: " Dans la comptine française, qui est célèbre pour 'sa culotte en travers' ?",
+        question: " Dans la comptine française, qui est célèbre pour 'sa culotte à l'envers' ?",
         answer: [
             "A) Le roi Dagobert", 
             "B) Le roi Louis", 
@@ -210,7 +271,7 @@ const historyQuestions = [
 
 const cultureQuestions = [
     {
-        
+        //
         question: "Quel est le prénom du jeune garçon, personnage principal de la série animée «Pokémon»?",
         answer: [
             "A) Pierrick ", 
@@ -240,7 +301,7 @@ const cultureQuestions = [
         correctAnswer: "C) Thriller"
     },
     {
-        
+        //
         question: "Quel est le nom associé au personnage joué par Millie Bobby Brown dans «Stranger Things»?",
         answer: [
             "A) Quarante-deux ", 
@@ -260,7 +321,7 @@ const cultureQuestions = [
         correctAnswer: "A) Sega"
     },
     {
-        
+        //
         question: "Quel duo d'artiste francophone  à reprit en 2023 le célèbre morceau «Lady (Hear me Tonight)» sorti en 2000?",
         answer: [
             "A) Aya Nakamura & Tiakola", 
@@ -300,11 +361,11 @@ const cultureQuestions = [
         correctAnswer: "D) A,B et C donc D"
     },
     {
-        
+        //
         question: "Quel chanteuse américaine interprète «Man Down», et raconte les remords suite à un meurtre?",
         answer: [
             "A) Shakira ", 
-            "B) Beyoncé ", 
+            "B) Yoann Fortin ", 
             "C) Rihanna ", 
             "D) Shanna Kress"], 
         correctAnswer: "C) Rihanna "

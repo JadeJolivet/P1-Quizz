@@ -52,6 +52,12 @@ header{
     flex-direction: column;
 }
 
+h3 {
+    font-family: Montserrat;
+    color: white;
+    font-size: 25px;
+}
+
 h2, div{
     color: whitesmoke;
     font-family: Poppins;
@@ -79,32 +85,42 @@ main > .question-box{
     text-align: center;
 }
 
-    .timer{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2.5rem;
+
+}
+
+.box-timer {
+    background-color: #BAF5FF;
+    width: 20rem;
+    height: 1.2rem;
+    position: relative;
+    border-radius: 30px;
+    border: 0.1rem solid #F570FE;
+    box-shadow: 0 0 10px 1px #F570FE;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.timer {
+    width: 19.8rem;
+    height: 1rem;
+    background-color: #F570FE;
+    border: 0.1rem solid #F570FE;
+    border-radius: 30px;
+    transition: width 10s linear;
     
-    progress{
-        border: 0.1rem solid #F570FE;
-        border-radius: 30px;
-        box-shadow: 0 0 10px 1px #F570FE;
-        width: 15rem;
-    
-    
-    }
-    
-    progress::-webkit-progress-bar {
-        border-radius: 30px;
-        background-color: #9CB8FF;
-    }
-    
-    progress::-webkit-progress-value {
-        background-color: #F570FE;
-        border-radius: 30px;
-    
-    }
-    
+
+}
+
+.timer:hover:focus:active {
+    width: 0rem;
+}
+
     
 
     main > .answer-box{
@@ -134,8 +150,8 @@ main > .answer-box > div {
 }
 
 .answer-box :hover{
-    background-color: #077dbd;
-    color: #111038;
+    border: solid #F570FE;
+    box-shadow: 0 0 10px 1px #F570FE;
     transition: 1s  ease;
 
 }
@@ -177,6 +193,13 @@ footer > p{
 
     header>h1{
         grid-column: 2/3;
+    }
+
+    header>h3 {
+        text-align: end;
+        margin-right: 12px;
+        margin-top: 5px;
+        font-size: 35px;
     }
 
     main> .question-box{
