@@ -84,7 +84,7 @@ function NextQuestion() {
             questionIndex = 0;
             questionThemeIndex++;
             if (questionThemeIndex >= 1) {
-                document.location.href = "endPage.html";
+                document.location.href = "endpage.html";
             } else {
                 questionCategory();
                 showQuestion();
