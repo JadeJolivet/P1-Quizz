@@ -1,9 +1,6 @@
-
-
-
-*{
+* {
     box-sizing: border-box;
-    margin:0;
+    margin: 0;
     padding: 0;
 
 }
@@ -13,7 +10,7 @@ html {
 }
 
 body {
-    background: linear-gradient(rgba(17, 16, 56, 1),85%,rgba(245, 112, 254, 1));
+    background: linear-gradient(rgba(17, 16, 56, 1), 85%, rgba(245, 112, 254, 1));
 
 }
 
@@ -25,44 +22,18 @@ header {
 }
 
 
-header > a > img{
+header>a>img {
     width: 8rem;
-    
-}
-
-/* div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-progress{
-    border: 0.1rem solid #F570FE;
-    border-radius: 30px;
-    box-shadow: 0 0 10px 1px #F570FE;
-    width: 15rem;
-
 
 }
 
-progress::-webkit-progress-bar {
-    border-radius: 30px;
-    background-color: #9CB8FF;
-}
-
-progress::-webkit-progress-value {
-    background-color: #F570FE;
-    border-radius: 30px;
-  
-} */
-
-header > h1 {
+header>h1 {
     display: flex;
     color: #9CB8FF;
     font-family: montserrat;
 }
 
-header > h1 > span {
+header>h1>span {
     display: flex;
     color: #F570FE;
     transform: translate(0rem, 1rem);
@@ -70,7 +41,14 @@ header > h1 > span {
 
 /* Partie Main */
 
-main > h2:first-of-type {
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+main>h2:first-of-type {
     color: #9CB8FF;
     margin: 2.5rem 0rem 2.5rem 0rem;
     font-family: poppins;
@@ -79,16 +57,15 @@ main > h2:first-of-type {
     align-items: center;
 }
 
- main > .avatar {
+main>.avatar {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     gap: 0.5rem;
     margin: 0rem;
-} 
+}
 
-
-main > .avatar > a {
+main>.avatar>a {
     border: 0.1rem solid #F570FE;
     border-radius: 100%;
     box-shadow: 0 0 10px 1px #F570FE;
@@ -101,22 +78,22 @@ main > .avatar > a {
 }
 
 
-main > .avatar > a:hover{
+main>.avatar>a:hover {
     box-shadow: 0 0 10px 1px #BAF5FF;
     border: 0.1rem solid rgb(186, 245, 255);
 }
 
-.elfe {
+.ronald {
     background-image: url(./avatar.img/ronald-removebg-preview.png);
     background-size: 130%;
     background-repeat: no-repeat;
     background-position: center;
     justify-self: right;
-    
+
 }
 
 
-.dragon {
+.pumba {
     background-image: url(./avatar.img/pumba-removebg-preview.png);
     background-size: 70%;
     background-repeat: no-repeat;
@@ -124,7 +101,7 @@ main > .avatar > a:hover{
     justify-self: right;
 }
 
-.reine {
+.kassos {
     background-image: url(./avatar.img/kassos-removebg-preview.png);
     background-size: 150%;
     background-repeat: no-repeat;
@@ -132,7 +109,7 @@ main > .avatar > a:hover{
     justify-self: left;
 }
 
-.roi {
+.vador {
     background-image: url(./avatar.img/vador-removebg-preview.png);
     background-size: 80%;
     background-repeat: no-repeat;
@@ -140,21 +117,21 @@ main > .avatar > a:hover{
     justify-self: right;
 }
 
-.orc {
+.pikachu {
     background-image: url(./avatar.img/pikachu-removebg-preview.png);
     background-size: 80%;
     background-repeat: no-repeat;
     background-position: center;
 }
 
-.guerrier {
+.thor {
     background-image: url(./avatar.img/thor-removebg-preview.png);
     background-size: 150%;
     background-repeat: no-repeat;
     background-position: center;
 }
 
-main > h2:last-of-type {
+main>h2:last-of-type {
     color: #9CB8FF;
     margin: 2.5rem 0rem 1rem 0rem;
     font-family: poppins;
@@ -164,14 +141,14 @@ main > h2:last-of-type {
 }
 
 
-main > section:last-of-type{
+main>section:last-of-type {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 1rem;
 }
 
-main > .label > a{
+main>.label>a {
     box-shadow: 0 0 10px 1px #F570FE;
     border-radius: 30px;
     text-decoration: none;
@@ -187,7 +164,7 @@ main > .label > a{
     font-weight: bold;
 }
 
-main > .label > a:hover{
+main>.label>a:hover {
     color: #111038;
     background-color: #F570FE;
     box-shadow: 0 0 10px 1px #111038;
@@ -200,7 +177,7 @@ input {
     height: 2rem;
     width: 15rem;
     border-radius: 30px;
-    background-color:#9cb8ff61;
+    background-color: #9CB8FF;
     padding: 0.8rem;
     font-family: poppins;
     font-weight: bold;
@@ -210,11 +187,12 @@ input:focus {
     background-color: #F570FE;
     color: #111038;
     box-shadow: 0 0 10px 1px #111038;
+
 }
 
 
 
-footer > p {
+footer>p {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -229,49 +207,54 @@ footer > p {
 
     header {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr ;
-        grid-template-rows: auto; 
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
     }
 
-    header > a {
+    header>a {
         grid-column-start: 1/3;
         justify-self: start;
     }
 
-    header > h1 {
+    header>h1 {
         grid-column: 2/3;
         justify-self: center;
     }
 
-    main > h2:first-of-type {
+    main>h2:first-of-type {
         margin: 2.5rem 0rem 2.5rem 2.5rem;
         display: flex;
-        justify-content:flex-start;
+        justify-content: center;
+        align-items: center;
 
     }
 
-    main > h2:last-of-type {
+    main>h2:last-of-type {
         margin: 2.5rem 0rem 2.5rem 2.5rem;
         display: flex;
-        justify-content:flex-start;
+        justify-content: center;
+        align-items: center;
     }
 
-    main > section:last-of-type{
+    main>section:last-of-type {
         display: flex;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
         margin-left: 0.5rem;
         margin-bottom: 1rem;
     }
 
-    main > .avatar{
-        grid-template-columns: 1fr 1fr 4fr;
+    main>.avatar {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr;
-        
-    } 
-    
+        gap: 0.5rem;
+        margin: 0rem;
 
-    main > .avatar > a {
+    }
+
+
+    main>.avatar>a {
         border: 0.1rem solid #F570FE;
         border-radius: 100%;
         box-shadow: 0 0 10px 1px #F570FE;
@@ -282,22 +265,31 @@ footer > p {
         align-items: center;
         justify-content: center;
     }
-    
-    .dragon {
-        justify-self: left;
-        margin-left: 0.5rem;
+
+    .pumba {
+        justify-self: right;
+
     }
 
-    .elfe {
-        justify-self: left;
+    .ronald {
+        justify-self: center;
     }
-   
-    .roi {
+
+    .vador {
         justify-self: left;
     }
 
-    .orc {
-        margin-left: 0.5rem;
+    .pikachu {
+        justify-self: right;
+
+    }
+
+    .kassos {
+        justify-self: center;
+    }
+
+    .thor {
+        justify-content: left;
     }
 
 }
