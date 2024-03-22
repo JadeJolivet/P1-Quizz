@@ -1,14 +1,11 @@
 const questionText = document.querySelector(".question-text");
 const answerBoxes = document.querySelectorAll(".answer-box div");
 const timerBox = document.querySelector(".timer");
-
-
 let questionIndex = 0;
 let questionThemeIndex = 0;
 let questionTheme;
 let correctAnswer;
 let questionNumberExact = 1;
-
 function questionCategory() {
     if (questionThemeIndex === 0) {
         questionTheme = mixQuestion;
@@ -16,67 +13,69 @@ function questionCategory() {
         questionTheme = [];
     }
 }
-
-
 function showQuestion() {
     let currentQuestion = questionTheme[questionIndex];
     questionText.textContent = currentQuestion.question;
     const currentAnswers = currentQuestion.answer;
-    correctAnswer = currentQuestion.correctAnswer; // Sauvegarde de la réponse correcte
-
+    correctAnswer = currentQuestion.correctAnswer;
     answerBoxes.forEach((box, index) => {
-        box.textContent = currentAnswers[index];   
+        box.textContent = currentAnswers[index];
         box.style.color = '';
-        box.style.border =''; // Réinitialisation de la couleur du texte
+        box.style.border ='';
     });
 }
-
 let timer;
 let timerDuration = 12000;
-
-function startTimer(){
-    let timeLeft = timerDuration / 1000; 
-    timerBox.textContent = timeLeft;
-    
-    
-
+function resetTimer() {
+    const timerElement = document.querySelector('.timer');
+    timerElement.style.animation = 'none';
+    timerElement.offsetHeight;
+    timerElement.style.animation = '';
+}
+function startTimer() {
+    let timeLeft = timerDuration / 1000;
+    updateTimerBox(timeLeft);
+    resetTimer();
+    if (timer) {
+        clearInterval(timer);
+    }
     timer = setInterval(() => {
         timeLeft--;
-        if (timeLeft >= 0) {
-        timerBox.textContent = timeLeft;
-        
-     }else {
-        clearInterval(timer);
-     }
-
+        updateTimerBox(timeLeft);
+        if (timeLeft <= 0) {
+            clearInterval(timer);
+            setTimeout(() => {
+                startTimer();
+            }, 2000);
+        }
     }, 1000);
 }
-
-function stopTimer(){
-    clearInterval(timer);
+function updateTimerBox(time) {
+    const timerBoxElement = document.querySelector(".timer-box-text"); // Assurez-vous que cet élément existe pour afficher le temps restant
+    if (timerBoxElement) timerBoxElement.textContent = time;
 }
-
-
-
+function stopTimer() {
+    clearInterval(timer);
+    timer = null;
+}
+``
 function revealAnswer() {
     answerBoxes.forEach((box, index) => {
         if (box.textContent === correctAnswer) {
             box.style.color = 'green';
-            box.style.border = '2px solid #00ff00';  // Texte en vert si correct
-            
+            box.style.border = '2px solid #00FF00';  // Texte en vert si correct
         }else{
             box.style.color = 'red';
-            box.style.border = '2px solid #ff0000'; // Texte en rouge si incorrect
-           
+            box.style.border = '2px solid #FF0000'; // Texte en rouge si incorrect
         }
     });
 }
-
-
-
 function NextQuestion() {
     stopTimer();
+    setTimeout(() => {
     startTimer();
+    updateTimerBox();
+}, 2000);
     setTimeout(() => {
         questionIndex++;
         if (questionIndex < questionTheme.length) {
@@ -91,44 +90,32 @@ function NextQuestion() {
                 showQuestion();
             }
         }
-    }, 2000); // Délai de 3 secondes avant de passer à la prochaine question
+    }, 2000);
 }
-
+// Question count
 answerBoxes.forEach(box => {
     box.addEventListener('click', () => {
-        revealAnswer(); // Révéler la réponse au clic
+        revealAnswer();
         setTimeout(() => {
             questionNumberExact++;
-            console.log(questionNumberExact); 
+            console.log(questionNumberExact);
             const questionNumber = document.getElementsByClassName("questionNumber")[0];
-            questionNumber.innerHTML = questionNumberExact + "/10";
-        }, 2000); // Incrémenter le numéro de question et mettre à jour l'affichage après un délai de 4 secondes
-        NextQuestion(); // Passer à la question suivante après un délai de 2 secondes
+            questionNumber.innerHTML = questionNumberExact + "/16";
+        }, 2000);
+        NextQuestion();
     });
 });
-
-// Appel initial pour afficher la première question
 questionCategory();
 showQuestion();
 startTimer();
 
 
-//HYPER IMPORTANT SANS CE COMMENTAIRE LE CODE NE FONCTIONNE PLUS//
 
-/*import questionArray from './questionArray';
-for (let i = 0; i < techQuestions.length; i++){
-        const  currentQuestion = techQuestions [i];
-        quizzQuestions(currentQuestions);
 
-for (let i = 0; i < historyQuestions.length; i++){
-        const  currentQuestion = historyQuestions [i];
-        quizzQuestions(currentQuestions);}
 
-for (let i = 0; i < cultureQuestions.length; i++){
-        const  currentQuestion = cultureQuestions [i];
-        quizzQuestions(currentQuestions);
 
-for (let i = 0; i < sporthQuestions.length; i++){
-        const  currentQuestion = sportQuestions [i];
-        quizzQuestions(currentQuestions);
-}*/
+
+
+
+
+

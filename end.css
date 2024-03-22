@@ -12,6 +12,9 @@ background: linear-gradient(rgba(17, 16, 56, 1),85%,rgba(245, 112, 254, 1));
 
 } 
 
+
+
+
 header {
     display: flex;
     justify-content: center;
@@ -154,4 +157,6 @@ footer>p {
 }
 
 }
+
+
 

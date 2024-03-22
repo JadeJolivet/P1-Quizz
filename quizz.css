@@ -1,232 +1,181 @@
 *{
-        box-sizing: border-box;
-        margin:0;
-        padding: 0;
-        
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
 }
-
-
-
 .logo{
-    width: 5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    margin-bottom: 0;
-  
+width: 5rem;
+display: flex;
+justify-content: center;
+align-items: center;
+margin: auto;
+margin-bottom: 0;
 }
-
 /* your gradient background will extend the entire height of the content without repeating, even if the content is scrollable.*/
-
 html {
-    min-height: 100%;
+min-height: 100%;
 }
-
-
 body{
-    background: linear-gradient(rgba(17, 16, 56, 1),85%,rgba(245, 112, 254, 1));
+background: linear-gradient(rgba(17, 16, 56, 1),85%,rgba(245, 112, 254, 1));
 }
-
 header>h1{
-    font-family: Montserrat;
-    font-size: 1.5rem;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 30px;
+font-family: Montserrat;
+font-size: 1.5rem;
+display: flex;
+justify-content: center;
+margin-bottom: 30px;
 }
-
 .blue{
-    color: rgba(186, 245, 255, 1);
+color: rgba(186, 245, 255, 1);
 }
-
 .pink{
-    color:rgba(245, 112, 254, 1);
-    transform: translate(0rem, 1rem); 
+color:rgba(245, 112, 254, 1);
+transform: translate(0rem, 1rem);
 }
-
 header{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
 }
-
 h3 {
-    font-family: Montserrat;
-    color: white;
-    font-size: 25px;
+font-family: Montserrat;
+color: white;
+font-size: 25px;
 }
-
 h2, div{
-    color: whitesmoke;
-    font-family: Poppins;
-    font-size: 0.85em;
-    text-decoration: none;
+color: whitesmoke;
+font-family: Poppins;
+font-size: 0.85em;
+text-decoration: none;
 }
-
 h2 > .question-text{
-    display:flex;
-    justify-content: center;  
+display:flex;
+justify-content: center;
 }
-
-
 main > .question-box{
-    border: solid rgba(156, 184, 255, 1);
-    box-shadow: 0 0 10px 1px #48abe0;
-    border-radius: 1rem ;
-    width: 350px;
-    height: 100px;
-    margin: 2rem auto; 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+border: solid rgba(156, 184, 255, 1);
+box-shadow: 0 0 10px 1px #48ABE0;
+border-radius: 1rem ;
+width: 350px;
+height: 100px;
+margin: 2rem auto;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+text-align: center;
 }
-
 .box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 2.5rem;
-
+display: flex;
+justify-content: center;
+align-items: center;
+margin-bottom: 2.5rem;
 }
-
 .box-timer {
-    background-color: #BAF5FF;
-    width: 20rem;
-    height: 1.2rem;
-    position: relative;
-    border-radius: 30px;
-    border: 0.1rem solid #F570FE;
-    box-shadow: 0 0 10px 1px #F570FE;
-    display: flex;
-    flex-direction: row;
-
+background-color: #BAF5FF;
+width: 20rem;
+height: 1.2rem;
+position: relative;
+border-radius: 30px;
+border: 0.1rem solid #F570FE;
+box-shadow: 0 0 10px 1px #F570FE;
 }
-
 .timer {
-    width: 19.8rem;
-    height: 1rem;
-    background-color: #F570FE;
-    border: 0.1rem solid #F570FE;
-    border-radius: 30px;
-    transition: width 10s linear;
-    
-
+width: 100%;
+height: 1rem;
+background-color: #F570FE;
+border: 0.1rem solid #F570FE;
+border-radius: 30px;
+animation: timerAnimation 12s linear ;
 }
-
-.timer:hover:focus:active {
-    width: 0rem;
+@keyframes timerAnimation {
+0% {
+  width: 100%;
 }
-
-    
-
-    main > .answer-box{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 2rem;
-    cursor: pointer;
-
-    }
-
-
+100% {
+  width: 0%; /
+}
+}
+main > .answer-box{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+margin: 2rem;
+cursor: pointer;
+}
 main > .answer-box > div {
-    border: solid rgba(156, 184, 255, 1);
-    box-shadow: 0 0 10px 1px #48abe0;
-    border-radius: 1rem ;
-    text-align: center;
-    margin-bottom: 50px;
-    width: 250px;
-    min-height: 65px;
-    margin: 0.5rem auto ;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-
+border: solid rgba(156, 184, 255, 1);
+box-shadow: 0 0 10px 1px #48ABE0;
+border-radius: 1rem ;
+text-align: center;
+margin-bottom: 50px;
+width: 250px;
+min-height: 65px;
+margin: 0.5rem auto ;
+display: flex;
+justify-content: center;
+flex-direction: column;
 }
-
 .answer-box :hover{
-    border: solid #F570FE;
-    box-shadow: 0 0 10px 1px #F570FE;
-    transition: 1s  ease;
-
+border: solid #F570FE;
+box-shadow: 0 0 10px 1px #F570FE;
+transition: 1s  ease;
 }
-
 .answer-box > div > p {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    
+display: flex;
+justify-content: center;
+align-items: center;
 }
-
-
 footer {
+display: flex;
+align-items: center;
+justify-content: center;
+}
+footer > p{
+text-align: center;
+color: #111038;
+}
+@media screen and (min-width: 992px){
+header{
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr ;
+   grid-template-rows: auto;
+   align-items: start;
+}
+header>a{
+    grid-column-start: 1/3;
+    justify-self: start;
+}
+header>h1{
+    grid-column: 2/3;
+}
+header>h3 {
+    text-align: end;
+    margin-right: 12px;
+    margin-top: 5px;
+    font-size: 35px;
+}
+main> .question-box{
+    width: 600px;
+    min-height: 200px;
+    margin: 30px auto;
+}
+}
+main > .answer-box{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 20px;
+}
+main .answer-box > div{
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 500px;
 }
-
-footer > p{
-    text-align: center;
-    color: #111038;
-    
+footer{
+ footer {position: absolute, bottom 0;}
 }
-
-@media screen and (min-width: 992px){
-
-    header{
-       display: grid;
-       grid-template-columns: 1fr 1fr 1fr ;
-       grid-template-rows: auto;
-       align-items: start;
-    }
-
-    header>a{
-        grid-column-start: 1/3;
-        justify-self: start;
-    }
-
-    header>h1{
-        grid-column: 2/3;
-    }
-
-    header>h3 {
-        text-align: end;
-        margin-right: 12px;
-        margin-top: 5px;
-        font-size: 35px;
-    }
-
-    main> .question-box{
-        width: 600px;
-        min-height: 200px;
-        margin: 30px auto;
-    }
-
-    main > .answer-box{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto;
-        gap: 20px;    
-    }
-
-   main .answer-box > div{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 500px;
-    }
-
-    footer{
-     footer {position: absolute, bottom 0;}
-    }
-   
-}
-
-
 
